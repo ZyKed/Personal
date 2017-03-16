@@ -6,10 +6,17 @@ function ($urlRouterProvider, $stateProvider, $resourceProvider) {
         url: '/login',
         controller : 'loginController'
     })
+    .state("err",{
+        url : '/home',
+        templateUrl : '/NH.UI.Partials/HomePage.html'
+    })
     .state('home', {
         url : '/home',
         templateUrl : '/NH.UI.Partials/HomePage.html'
     })
+    .state('home.gadgets', {
+        url : '/gadgets'
+    }) 
     .state('home.stories', {
         url : '/stories',
         templateUrl : '/NH.UI.Partials/HomePage.html'

@@ -1,4 +1,4 @@
-newsHuntApp.controller("loginController", ['$resource', '$scope', '$location', function($resource, $scope, $location){
+newsHuntApp.controller("loginController", ['$scope', '$location', function($scope, $location){
     $scope.isValid = true;
     $scope.userName = "Manish";
     $scope.login = function(){
