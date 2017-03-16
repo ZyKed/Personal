@@ -1,0 +1,1 @@
+var newsHuntApp = angular.module("News_Hunt_App", ['ui.router', 'ngResource']);

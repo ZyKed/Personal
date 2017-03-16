@@ -1,0 +1,54 @@
+<style type="text/css">
+  li {
+    padding: 0px 20px 0px 0px;
+  }
+  
+  button {
+    margin-top: 8px;
+  }
+</style>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">News Hunt</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="#" class="glyphicon glyphicon-home"></a>
+      </li>
+      <li>
+        <a href="#">News</a>
+      </li>
+      <li>
+        <a href="#">Contacts</a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Top Stories
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Weather</a></li>
+          <li><a href="#">Sports</a></li>
+          <li><a href="#">Politics</a></li>
+        </ul>
+      </li>
+      <li>
+        <input type="search" placeholder="Search Stories" style="margin: 11px 0px 0px 0px">
+        <input type = "radio" value = "byPlace" name = "byPlace"/> Search By Place
+        <input type = "radio" value = "byDate" name = "byPlace"/> Search By Date
+        </input>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Language
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Hindi</a></li>
+          <li><a href="#">English</a></li>
+        </ul>
+      </li>
+      <li class="glyphicon glyphicon-user" style="margin-top : 12px;"> {{userName}}</li>
+      <li><button class="btn btn-primary">Login</button></li>
+      <li><button class="btn btn-primary">Logout</button></li>
+      <li><button class="btn btn-primary">Register</button></li>
+    </ul>
+  </div>
+</nav>
