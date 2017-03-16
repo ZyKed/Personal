@@ -1,6 +1,7 @@
 newsHuntApp.directive('topBar', function () {
     return {
-        templateUrl: '/NH.UI.Partials/topBar.html'
+        templateUrl: '/NH.UI.Partials/topBar.html',
+        controller : 'loginController'
     }
 });
 

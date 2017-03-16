@@ -1,54 +1,15 @@
 <div>
-    <div class="panel panel-deault" style="float : left">
-        <div class="panel panel-deault">
-            <ul class="nav list-group">
-                <li><a ui-sref=".stories">Top Stories</a></li>
-                <li><a ui-sref=".sports">Sports</a></li>
-                <li><a ui-sref=".weather">Weather</a></li>
-                <li><a ui-sref=".shop">Shop</a></li>
-                <li><a ui-sref=".gadgets">Gadgets</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="panel panel-default" style="float : left">
-        <div>Top Stories</div>
-        <div class="panel panel-inverse">
-            Story 1<br/> description : wieojfpowjefowpejfo[wejkfwpo[ejfow[ejfpowejfwoejfwpoejfwpoefjwopjfwpoefjwpoefjwpoefjwpoefjwpof
-            jwpoef wiecjwiocjwpicjwpijjwpoefjwheuofwuiefw]]]eee
-            <br/><a href="#">View More</a>
-        </div>
-        <div class="panel panel-default">
-            Story 2<br/> description : wieojfpowjefowpejfo[wejkfwpo[ejfow[ejfpowejfwoejfwpoejfwpoefjwopjfwpoefjwpoefjwpoefjwpoefjwpof
-            jwpoef wiecjwiocjwpicjwpijjwpoefjwheuofwuiefw]]]eee
-            <br/><a href="#">View More</a>
-        </div>
-        <div class="panel panel-default">
-            Story 3<br/> description :wieojfpowjefowpejfo[wejkfwpo[ejfow[ejfpowejfwoejfwpoejfwpoefjwopjfwpoefjwpoefjwpoefjwpoefjwpofjwpoef
-            wiecjwiocjwpicjwpijjwpoefjwheuofwuiefw]]]eee
-            <br/><a href="#">View More</a>
-        </div>
-        <div class="panel panel-default">
-            Story 4<br/> description : wieojfpowjefowpejfo[wejkfwpo[ejfow[ejfpowejfwoejfwpoejfwpoefjwopjfwpoefjwpoefjwpoefjwpoefjwpofjwpoef
-            wiecjwiocjwpicjwpijjwpoefjwheuofwuiefw]]]eee
+    <div class="panel panel-default" style="float :left">
+        <div><h2>Top Stories</h2></div>
+        <div ng-repeat = "x in news | filter : {'x.type' : 'Sports'}" class="panel panel-inverse">
+            <h3>{{x.title}}</h3><br/> description : {{x.description}}
             <br/><a href="#">View More</a>
         </div>
     </div>
     <div class="panel panel-default" style="float : left">
-        <div>Trending Stories</div>
-        <div class="panel panel-inverse">
-            Story 1<br/> description : wieojfpowjefowpejfo
-            <br/><a href="#">View More</a>
-        </div>
-        <div class="panel panel-default">
-            Story 2<br/> description : wieojfpowjefowpejfo
-            <br/><a href="#">View More</a>
-        </div>
-        <div class="panel panel-default">
-            Story 3<br/> description :wieojfpowjefowpejfo
-            <br/><a href="#">View More</a>
-        </div>
-        <div class="panel panel-default">
-            Story 4<br/> description : wieojfpowjefowpejfo
+        <div><h2>Trending Stories</h2></div>
+        <div ng-repeat = "x in news | orderBy : 'x.likes' : true" class="panel panel-inverse">
+            <h3>{{x.title}}</h3><br/> description : {{x.description}}
             <br/><a href="#">View More</a>
         </div>
     </div>

@@ -7,8 +7,8 @@ function ($urlRouterProvider, $stateProvider, $resourceProvider) {
         controller : 'loginController'
     })
     .state("err",{
-        url : '/home',
-        templateUrl : '/NH.UI.Partials/HomePage.html'
+        url : '/err',
+        templateUrl : '/NH.UI.Partials/HomePage.html',
     })
     .state('home', {
         url : '/home',
