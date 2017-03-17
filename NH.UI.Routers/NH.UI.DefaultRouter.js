@@ -4,15 +4,17 @@ function ($urlRouterProvider, $stateProvider, $resourceProvider) {
     $stateProvider
     .state('login', {
         url: '/login',
+        templateUrl : '/NH.UI.Partials/login.html',
         controller : 'loginController'
     })
     .state("err",{
         url : '/err',
-        templateUrl : '/NH.UI.Partials/HomePage.html',
+        templateUrl : '/NH.UI.Partials/error.html'
     })
     .state('home', {
         url : '/home',
-        templateUrl : '/NH.UI.Partials/HomePage.html'
+        templateUrl : '/NH.UI.Partials/HomePage.html',
+        controller : 'newsController'
     })
     .state('home.gadgets', {
         url : '/gadgets'
@@ -33,4 +35,9 @@ function ($urlRouterProvider, $stateProvider, $resourceProvider) {
         url : '/sports',
         templateUrl : '/NH.UI.Partials/HomePage.html'
     });
+
+    $resourceProvider.defaults.actions.verifyUser = {
+        method : "POST",
+        headers:{'Content-Type':'application/JSON'}
+    };
 }]);

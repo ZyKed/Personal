@@ -1,4 +1,22 @@
-<div>
+<!--<div>
+    <div class="panel panel-default" style="float :left">
+        <div><h2>Top Stories</h2></div>
+        <div ng-repeat = "x in news | filter : {'type' : 'Sports'}" class="panel panel-inverse">
+            <h3>{{x.title}}</h3><br/> description : {{x.description}}
+            <br/><a href="#">View More</a>
+        </div>
+    </div>
+    <div class="panel panel-default" style="float : left">
+        <div><h2>Trending Stories</h2></div>
+        <div ng-repeat = "x in news | orderBy : 'likes' : true | filter : {'type' : 'Sports'}" class="panel panel-inverse">
+            <h3>{{x.title}}</h3><br/> description : {{x.description}}
+            <br/><a href="#">View More</a>
+        </div>
+    </div>
+    <div></div>
+</div>-->
+
+<!--<div>
     <div class="panel panel-default" style="float :left">
         <div><h2>Top Stories</h2></div>
         <div ng-repeat = "x in news" class="panel panel-inverse">
@@ -14,4 +32,95 @@
         </div>
     </div>
     <div ui-view></div>
+</div>-->
+
+
+
+<div id="templatemo_content">
+    <div style="width:100%; height:100px; font-size:60px; text-decoration: bold; padding-top:40px;padding-left: 30px; color:black">
+         Top Stories
+         </div>
+
+    <div id="templatemo_main_leftcol">
+ 
+                <div class="templatemo_leftcol_subcol" style="float : left">
+                    
+                    <div ng-repeat="x in news | orderBy : 'x.likes' : true" class="panel panel-inverse">
+                        <div class="templatemo_lcol_sectionwithborder ">
+                            <div class="thumbnail">
+                                <img src={{x.NewsPic2}} ></div>
+                            <h1>{{x.title}}</h1><br/>
+
+                           
+                                <br/><a ui-sref="news" >Read more</a>
+                            </div>
+                          
+                    </div>
+            
+        </div>
+    </div>
+
+    <!--</div>
+                        <div class="templatemo_lcol_sectionwithborder ">
+                            Story 2<br /> description : wieojfpowjefowpejfo[wejkfwpo[ejfow[ejfpowejfwoejfwpoejfwpoefjwopjfwpoefjwpoefjwpoefjwpoefjwpof
+                            jwpoef wiecjwiocjwpicjwpijjwpoefjwheuofwuiefw]]]eee
+                            <br /><a href="#">View More</a>
+                        </div>
+                        <div class="templatemo_lcol_sectionwithborder ">
+                            Story 3<br /> description :wieojfpowjefowpejfo[wejkfwpo[ejfow[ejfpowejfwoejfwpoejfwpoefjwopjfwpoefjwpoefjwpoefjwpoefjwpofjwpoef
+                            wiecjwiocjwpicjwpijjwpoefjwheuofwuiefw]]]eee
+                            <br /><a href="#">View More</a>
+                        </div>
+                        <div class="templatemo_lcol_sectionwithborder ">
+                            Story 4<br /> description : wieojfpowjefowpejfo[wejkfwpo[ejfow[ejfpowejfwoejfwpoejfwpoefjwopjfwpoefjwpoefjwpoefjwpoefjwpofjwpoef
+                            wiecjwiocjwpicjwpijjwpoefjwheuofwuiefw]]]eee
+                            <br /><a href="#">View More</a>
+                        </div>
+                    </div>-->
+
+
+
+
+
+    <div id="templatemo_main_rightcol">
+        <div class="templatemo_rcol_sectionwithborder">
+            <div id="templatemo_newsletter_section">
+                <div>
+                    <h2>Trending Stories</h2>
+                </div>
+                <div ng-repeat="x in news | orderBy : 'x.likes' : true" id="trending">
+                    <h3><a href="#">{{x.title}}</h3></a></div>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="templatemo_rcol_sectionwithborder">
+            <div id="templatemo_newsletter_section">
+                <h2>Subscribe Newsletter</h2>
+
+                <form method="get" action="#">
+
+                    <div class="form_row">
+                        <label>Choose Newsletter</label>
+                        <select>
+                            <option>Daily News</option>
+                            <option>Breaking News</option>
+                            <option>Sport News</option>                        
+                            <option>Entertainment News</option>                        
+                        </select>
+                    </div>
+                    <div class="form_row"><label>Email address &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input class="inputfield"
+                            name="email_address" type="text" id="email_addremss" /></div>
+                    <input class="button" type="submit" name="Submit" value="Subscribe" />
+                </form>
+            </div>
+        </div>
+
+
+
+
+    </div>
 </div>
