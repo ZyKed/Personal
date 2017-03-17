@@ -1,7 +1,7 @@
 <div>
     <div class="panel panel-default" style="float :left">
         <div><h2>Top Stories</h2></div>
-        <div ng-repeat = "x in news | filter : {'x.type' : 'Sports'}" class="panel panel-inverse">
+        <div ng-repeat = "x in news" class="panel panel-inverse">
             <h3>{{x.title}}</h3><br/> description : {{x.description}}
             <br/><a href="#">View More</a>
         </div>
