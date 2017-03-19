@@ -132,8 +132,8 @@
                 <div style="float:inherit">
                     <span class="glyphicon glyphicon-user"><font size = "5px">{{username}}</font></span>&nbsp;&nbsp;
               
-                <button ng-show = "username == 'Guest'" type="button" name="Search" alt="Search" title="Search" class="btn btn-success" data-toggle="modal" data-target="#LoginModal">Login</button>
-                <button ng-hide = "username == 'Guest'" type="button" name="Logout" alt="Logout" title="Logout" class="btn btn-success" data-toggle="modal" data-target="#LoginModal">Logout</button>
+                <button ng-show = "isValid == 'false'" type="button" name="Search" alt="Search" title="Search" class="btn btn-success" data-toggle="modal" data-target="#LoginModal">Login</button>
+                <button ng-show = "isValid == 'true'" type="button" name="Logout" alt="Logout" title="Logout" class="btn btn-success" data-toggle="modal" data-target="#LoginModal">Logout</button>
                     <div class="modal fade" id="LoginModal" role="dialog">
                         <div class="modal-dialog">
 

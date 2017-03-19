@@ -1,34 +1,37 @@
-newsHuntApp.controller("loginController", ['$scope', '$location', '$resource', function($scope, $location, $resource){
-    var res = $resource("http://172.17.120.135:3230/users/authenticate");
-    
+newsHuntApp.controller("loginController", ['$scope', '$location', '$resource', function ($scope, $location, $resource, baseUrl) {
+    var res = $resource(baseUrl + "/authenticate");
+    console.log(baseUrl);
     $scope.username = "Guest";
     $scope.password = "";
+    $scope.isValid = false;
     console.log("in loginController");
 
-    $scope.login = function(){
+    $scope.login = function () {
         console.log("in login()");
-        var req ={username:$scope.username, password: $scope.password};
-        var user = res.verifyUser(req, function(){
+        var req = { username: $scope.username, password: $scope.password };
+        var user = res.verifyUser(req, function () {
             console.log(user.success);
-            if(user.success == true){
-            console.log("able to log in");
-            $location.path("/home");
-        }
-        else{
-            console.log("not able to log in");
-            $scope.reset();
-            $location.path("/err");
-        }
+            if (user.success == true) {
+                $scope.isValid = true;
+                console.log("able to log in");
+                $location.path("/home");
+            }
+            else {
+                console.log("not able to log in");
+                $scope.reset();
+                $scope.isValid = false;
+                $location.path("/err");
+            }
         });
     }
 
-    $scope.reset = function(){
+    $scope.reset = function () {
         $scope.username = "Guest";
         $scope.password = "";
 
     }
 
-    $scope.logout = function(){
+    $scope.logout = function () {
         $scope.reset();
         $location.path("/home");
     }
