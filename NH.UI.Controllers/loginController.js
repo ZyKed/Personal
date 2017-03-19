@@ -5,7 +5,7 @@ newsHuntApp.controller("loginController", ['$scope', '$location', '$resource', f
     $scope.password = "";
     $scope.isValid = false;
     console.log("in loginController");
-
+    //sample comment
     $scope.login = function () {
         console.log("in login()");
         var req = { username: $scope.username, password: $scope.password };
